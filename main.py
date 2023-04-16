@@ -1,13 +1,2 @@
-
-
-def split():
-
-    content = open('items.txt', 'r').read().splitlines()
-
-    for info_d in content:
-        split = info_d.split(':')[2]
-        w = open('splitted.txt', 'a')
-        w.write(f"{split}\n")
-
-
-split()
+for line in open('items.txt', 'r').read().splitlines():
+    open('splitted.txt', 'a').write(f"{line.split(':')[2]}\n")
